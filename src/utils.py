@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from sklearn import metrics
 
-
+#huy
 def get_evaluation(y_true, y_prob, list_metrics):
     y_pred = np.argmax(y_prob, -1)
     output = {}
