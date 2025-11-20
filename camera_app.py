@@ -52,9 +52,9 @@ def main(opt):
 
     # Load model
     if torch.cuda.is_available():
-        model = torch.load("trained_models/whole_model_quickdraw")
+        model = torch.load("trained_models/Best_Model")
     else:
-        model = torch.load("trained_models/whole_model_quickdraw", map_location=lambda storage, loc: storage)
+        model = torch.load("trained_models/Best_Model", map_location=lambda storage, loc: storage)
     model.eval()
 
     while True:

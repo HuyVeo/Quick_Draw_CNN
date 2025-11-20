@@ -11,9 +11,13 @@ mp_drawing_styles = mp.solutions.drawing_styles
 mp_hands = mp.solutions.hands
 
 if torch.cuda.is_available():
-    model = torch.load("trained_models/whole_model_quickdraw")
+    model = torch.load(r"/trained_models/Best_Model")
 else:
-    model = torch.load("trained_models/whole_model_quickdraw", map_location=lambda storage, loc: storage)
+    model = torch.load(
+        r"/trained_models/Best_Model",
+        map_location="cpu",
+        weights_only=False
+    )
 model.eval()
 predicted_class = None
 

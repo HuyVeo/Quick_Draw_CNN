@@ -4,14 +4,12 @@ from src.config import *
 from src.dataset import CLASSES
 import torch
 
-
-
 def main():
     # Load model
     if torch.cuda.is_available():
-        model = torch.load("trained_models/whole_model_quickdraw")
+        model = torch.load("trained_models/Best_Model")
     else:
-        model = torch.load("trained_models/whole_model_quickdraw", map_location=lambda storage, loc: storage)
+        model = torch.load("trained_models/Best_Model", map_location=lambda storage, loc: storage)
     model.eval()
     image = np.zeros((480, 640, 3), dtype=np.uint8)
     cv2.namedWindow("Canvas")

@@ -140,7 +140,7 @@ def train(opt):
         if te_loss + opt.es_min_delta < best_loss:
             best_loss = te_loss
             best_epoch = epoch
-            torch.save(model, opt.saved_path + os.sep + "whole_model_quickdraw")
+            torch.save(model, opt.saved_path + os.sep + "Best_Model")
         if epoch - best_epoch > opt.es_patience > 0:
             print("Stop training at epoch {}. The lowest loss achieved is {}".format(epoch, te_loss))
             break
