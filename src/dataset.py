@@ -1,8 +1,6 @@
 from torch.utils.data import Dataset
 import numpy as np
-
 from src.config import CLASSES
-
 
 class MyDataset(Dataset):
     def __init__(self, root_path="data", total_images_per_class=10000, ratio=0.8, mode="train"):

@@ -2,7 +2,6 @@ import cv2
 import numpy as np
 from sklearn import metrics
 
-#huy
 def get_evaluation(y_true, y_prob, list_metrics):
     y_pred = np.argmax(y_prob, -1)
     output = {}
@@ -35,11 +34,3 @@ def get_overlay(bg_image, fg_image, sizes=(40, 40)):
     image = cv2.addWeighted(bg_image*bg_mask, 255, fg_image*fg_mask, 255, 0.).astype(np.uint8)
     return image
 
-
-
-
-
-# if __name__ == '__main__':
-#     images = get_images("../images", ["apple", "star"])
-#     print(images[0].shape)
-#     print(np.max(images[0]))
