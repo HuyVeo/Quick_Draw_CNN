@@ -11,11 +11,11 @@ mp_drawing_styles = mp.solutions.drawing_styles
 mp_hands = mp.solutions.hands
 
 if torch.cuda.is_available():
-    model = torch.load(r"/trained_models/Best_Model")
+    model = torch.load(r"D:\Quick_Draw_CNN\trained_models\Best_Model")
 else:
     model = torch.load(
-        r"/trained_models/Best_Model",
-        map_location="cpu",
+        r"D:\Quick_Draw_CNN\trained_models\Best_Model",
+        map_location="gpu" if torch.cuda.is_available() else "cpu",
         weights_only=False
     )
 model.eval()
