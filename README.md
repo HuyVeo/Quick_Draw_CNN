@@ -45,4 +45,4 @@ python3 train.py
 
 ---
 
-Nếu bạn muốn, mình có thể dịch file README này sang dạng chuyên nghiệp hơn, hoặc giúp bạn viết README chuẩn GitHub.
+
